@@ -7,7 +7,9 @@ Semester: Spring 2026
 
 ## Group Members
 Name      | Student ID | Email
+
 Wilson Tu | 301598563  | wta56@sfu.ca
+
 Rushil Sehgal | 301576003 | rsa203@sfu.ca
 
 Credits to ChatGPT for GUI elements and polishing README. Used Claude for debugging and workflow.
