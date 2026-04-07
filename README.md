@@ -7,7 +7,7 @@ A simple TCP-based file transfer application built in Python using socket progra
 
 Credits to ChatGPT for GUI elements and polishing README. Used Claude for debugging and workflow.
 
-Sources: 
+Sources: <br>
 https://realpython.com/python-sockets/ <br>
 https://www.digitalocean.com/community/tutorials/python-socket-programming-server-client <br>
 https://thepythoncode.com/article/send-receive-files-using-sockets-python
@@ -27,6 +27,11 @@ This project implements a TCP-based file transfer system in Python using a clien
 ## Requirements
 - Python 3.x
 - No external libraries required (uses built-in modules: socket, os, tkinter)
+
+## Setup
+1. Clone the repository
+2. Open a terminal in the project folder
+3. Ensure Python 3 is installed and accessible
 
 ## How to Run (Step-by-Step)
 
@@ -80,4 +85,4 @@ This application demonstrates:
 - Sending multiple files from client to server
 - Receiving and storing files correctly on the server side
 
-link: []
+link: [https://youtu.be/p_OEoXJ1-h4]
