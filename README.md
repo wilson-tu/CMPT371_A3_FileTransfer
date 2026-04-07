@@ -1,9 +1,21 @@
 # A3-371
 A simple TCP-based file transfer application built in Python using socket programming.
 
-Created by Wilson Tu and Rushil Seghal
+Course: CMPT 371 - Data Communications & Networking
+Instructor: Mirza Zaeem Baig
+Semester: Spring 2026
 
-Credits to ChatGPT for GUI elements, and Claude for debugging
+## Group Members
+Name      | Student ID | Email
+Wilson Tu | 301598563  | wta56@sfu.ca
+Rushil Sehgal | 301576003 | rsa203@sfu.ca
+
+Credits to ChatGPT for GUI elements and polishing README. Used Claude for debugging and workflow.
+
+Sources: 
+https://realpython.com/python-sockets/
+https://www.digitalocean.com/community/tutorials/python-socket-programming-server-client
+https://thepythoncode.com/article/send-receive-files-using-sockets-python
 
 # TCP File Transfer Application
 
@@ -32,7 +44,7 @@ You should see:
 
 ### 2. Run the Client
 Open a new terminal and run:
-python client_gui.py
+python client.py
 
 ### 3. Send Files
 1. Click "Add Files"
@@ -50,17 +62,17 @@ Files are stored with their original filenames.
 ```
 project/
 │── server.py
-│── client_gui.py
+│── client.py
 │── received_files/
 │── README.md
 ```
 
 ## Limitations
-- Supports only one client connection at a time
-- No encryption or security for file transfer
-- Does not support resuming interrupted transfers
-- Assumes a stable network connection
-- GUI is basic and not intended for large-scale use
+- Supports only one client connection at a time (no concurrency handling)
+- TCP is used as a byte stream; message boundaries are manually handled using a delimiter
+- No encryption or authentication, making the system insecure for real-world use
+- No support for resuming interrupted transfers
+- Performance may degrade for very large files due to fixed buffer size
 
 ## Notes
 - The server must be started before running the client
@@ -73,3 +85,4 @@ This application demonstrates:
 - Sending multiple files from client to server
 - Receiving and storing files correctly on the server side
 
+link: []
