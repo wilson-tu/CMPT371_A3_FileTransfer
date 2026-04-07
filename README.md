@@ -47,11 +47,13 @@ received_files/
 Files are stored with their original filenames.
 
 ## Project Structure
+```
 project/
 │── server.py
 │── client_gui.py
 │── received_files/
 │── README.md
+```
 
 ## Limitations
 - Supports only one client connection at a time
