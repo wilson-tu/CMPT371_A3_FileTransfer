@@ -6,15 +6,15 @@ A simple TCP-based file transfer application built in Python using socket progra
 **Semester:** Spring 2026  
 
 ## Group Members
-**Wilson Tu | 301598563 | wta56@sfu.ca**
+**Wilson Tu | 301598563 | wta56@sfu.ca** <br>
 **Rushil Sehgal | 301576003 | rsa203@sfu.ca**
 
 Credits to ChatGPT for GUI elements and polishing README. Used Claude for debugging and workflow.
 
 Sources: 
-**https://realpython.com/python-sockets/**
-**https://www.digitalocean.com/community/tutorials/python-socket-programming-server-client**
-**https://thepythoncode.com/article/send-receive-files-using-sockets-python**
+https://realpython.com/python-sockets/ <br>
+https://www.digitalocean.com/community/tutorials/python-socket-programming-server-client <br>
+https://thepythoncode.com/article/send-receive-files-using-sockets-python
 
 # TCP File Transfer Application
 
