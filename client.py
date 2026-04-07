@@ -3,12 +3,14 @@ import os
 import tkinter as tk
 from tkinter import filedialog, messagebox
 
+# Server connection settings
 SERVER_HOST = '127.0.0.1'
 SERVER_PORT = 5001
 
+# Tracks the list of file paths the user has selected
 selected_files = []
 
-def choose_files():
+def choose_files(): # Open a file picker and add chosen files to the selection list
     global selected_files
     files = filedialog.askopenfilenames()
     if files:
@@ -17,13 +19,13 @@ def choose_files():
                 selected_files.append(f)
                 file_listbox.insert(tk.END, os.path.basename(f))
 
-def clear_files():
+def clear_files(): # Clear all selected files and reset the progress label
     global selected_files
     selected_files.clear()
     file_listbox.delete(0, tk.END)
     progress_label.config(text="Progress: 0")
 
-def send_files():
+def send_files(): # Connect to the server and send all selected files one by one
     global selected_files
 
     if not selected_files:
@@ -31,6 +33,7 @@ def send_files():
         return
 
     try:
+        # Establish a TCP connection to the server
         client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         client.connect((SERVER_HOST, SERVER_PORT))
 
@@ -38,11 +41,13 @@ def send_files():
             filesize = os.path.getsize(filepath)
             filename = os.path.basename(filepath)
 
+            # Send a header line with filename and size
             header = f"{filename}|{filesize}\n"
             client.sendall(header.encode())
 
             sent = 0
 
+            # Read and send the file in 1 KB chunks
             with open(filepath, "rb") as f:
                 while True:
                     data = f.read(1024)
@@ -56,7 +61,7 @@ def send_files():
                     )
                     root.update_idletasks()
 
-        client.sendall(b"DONE\n")
+        client.sendall(b"DONE\n") # Signal to the server that all files have been sent
         client.close()
 
         messagebox.showinfo("Success", "All files sent!")
@@ -94,7 +99,7 @@ clear_btn.grid(row=0, column=1, padx=5)
 send_btn = tk.Button(root, text="Send Files", command=send_files, width=32)
 send_btn.pack(pady=5)
 
-# File list (scrollable)
+# Scrollable list showing all the selected file names
 frame = tk.Frame(root)
 frame.pack(pady=10)
 
@@ -111,6 +116,7 @@ file_listbox.pack()
 
 scrollbar.config(command=file_listbox.yview)
 
+# Label that shows per-file transfer progress
 progress_label = tk.Label(
     root,
     text="Progress: 0",

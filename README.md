@@ -1,7 +1,7 @@
 # A3-371
 A simple TCP-based file transfer application built in Python using socket programming.
 
-Created by Wilson Tu and Rushil Seghal
+Created by Wilson Tu (301598563) and Rushil Seghal (301576003)
 
 Credits to ChatGPT for GUI elements, and Claude for debugging
 
@@ -32,7 +32,7 @@ You should see:
 
 ### 2. Run the Client
 Open a new terminal and run:
-python client_gui.py
+python client.py
 
 ### 3. Send Files
 1. Click "Add Files"
@@ -50,7 +50,7 @@ Files are stored with their original filenames.
 ```
 project/
 │── server.py
-│── client_gui.py
+│── client.py
 │── received_files/
 │── README.md
 ```
