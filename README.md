@@ -2,6 +2,7 @@
 A simple TCP-based file transfer application built in Python using socket programming.
 
 Created by Wilson Tu and Rushil Seghal
+
 Credits to ChatGPT for GUI elements, and Claude for debugging
 
 # TCP File Transfer Application
