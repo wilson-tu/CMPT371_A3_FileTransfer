@@ -1,10 +1,6 @@
 # A3-371
 A simple TCP-based file transfer application built in Python using socket programming.
 
-**Course:** CMPT 371 - Data Communications & Networking  
-**Instructor:** Mirza Zaeem Baig  
-**Semester:** Spring 2026  
-
 ## Group Members
 **Wilson Tu | 301598563 | wta56@sfu.ca** <br>
 **Rushil Sehgal | 301576003 | rsa203@sfu.ca**
