@@ -1,6 +1,9 @@
 # A3-371
 A simple TCP-based file transfer application built in Python using socket programming.
 
+Created by Wilson Tu and Rushil Seghal
+Credits to ChatGPT for GUI elements, and Claude for debugging
+
 # TCP File Transfer Application
 
 ## Description
@@ -66,3 +69,4 @@ This application demonstrates:
 - Establishing a TCP connection
 - Sending multiple files from client to server
 - Receiving and storing files correctly on the server side
+
