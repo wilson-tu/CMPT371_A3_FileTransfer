@@ -1,9 +1,16 @@
 # A3-371
 A simple TCP-based file transfer application built in Python using socket programming.
 
-Created by Wilson Tu (301598563) and Rushil Seghal (301576003)
+## Group Members
+**Wilson Tu | 301598563 | wta56@sfu.ca** <br>
+**Rushil Sehgal | 301576003 | rsa203@sfu.ca**
 
-Credits to ChatGPT for GUI elements, and Claude for debugging
+Credits to ChatGPT for GUI elements and polishing README. Used Claude for debugging and workflow.
+
+Sources: 
+https://realpython.com/python-sockets/ <br>
+https://www.digitalocean.com/community/tutorials/python-socket-programming-server-client <br>
+https://thepythoncode.com/article/send-receive-files-using-sockets-python
 
 # TCP File Transfer Application
 
@@ -56,11 +63,11 @@ project/
 ```
 
 ## Limitations
-- Supports only one client connection at a time
-- No encryption or security for file transfer
-- Does not support resuming interrupted transfers
-- Assumes a stable network connection
-- GUI is basic and not intended for large-scale use
+- Supports only one client connection at a time (no concurrency handling)
+- TCP is used as a byte stream; message boundaries are manually handled using a delimiter
+- No encryption or authentication, making the system insecure for real-world use
+- No support for resuming interrupted transfers
+- Performance may degrade for very large files due to fixed buffer size
 
 ## Notes
 - The server must be started before running the client
@@ -73,3 +80,4 @@ This application demonstrates:
 - Sending multiple files from client to server
 - Receiving and storing files correctly on the server side
 
+link: []
